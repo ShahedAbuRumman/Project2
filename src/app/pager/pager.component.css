@@ -1,0 +1,8 @@
+.pagination {
+  padding: 0;
+  border-radius: 25px;
+  background-color: #dddcdc;
+  width: 10%;
+  height: 40px; 
+  align-items: center;
+}

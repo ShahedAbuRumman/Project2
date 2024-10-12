@@ -1,0 +1,31 @@
+
+  <div class="row">
+    <div class="col-3" *ngFor="let card of cards">
+      <div class="card my-4 mx-2">
+        <div class="card-body" *ngFor="let card of filteredCards()">
+          <div class="d-flex flex-column align-items-center">
+            <img class="rounded-circle p-2 bd-highlight w-50" alt="employee" src="../assets/employee.png" />
+            <h5 class="card-title" [innerHTML]="highlightText(card.employeeName, searchText)"></h5>
+          </div>
+          <p class="text-secondary">Submitted on:</p>
+          <p class="fw-bold text-secondary">{{ card.submit | date: 'shortDate' }}</p>
+          <p class="text-secondary">Duration:</p>
+          <p class="fw-bold text-secondary" [innerHTML]="highlightText(card.duration, searchText)"></p>
+          <p class="text-secondary">Salary:</p>
+          <p class="fw-bold text-secondary" [innerHTML]="highlightText(card.salary, searchText)"></p>
+          <button type="button" class="btn btn-light btn-outline-success py-1 px-4 fs-6 mx-2">Decline</button>
+          <button type="button" class="btn btn-success py-1 px-4 fs-6">Approve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+      
+      
+      
+      
+  
+  
+  
+  

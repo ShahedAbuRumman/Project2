@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="row m-5">
+  <div class="col-10">
+      <h3>{{title}}</h3>
+</div>
+<div class="col-2">
+<button class="btn btn-success px-5">New Reqest</button>
+</div>
+</div>
+<div class="d-flex justify-content-around align-items-center">
+<app-employeedetails1></app-employeedetails1>
+<app-card></app-card>
+</div>
+<p class="mt-5 ms-4 fw-bold">Latest News:</p>
+<app-imageslider></app-imageslider>
+
+<div class="card bg-light w-100 rounded-4 m-5" >   
+  <div class="d-flex bd-highlight  justify-content-between" >
+          <div class="d-flex flex-row  ">
+            <i class="fa-solid fa-list-check p-2 w-25 h-25 ms-2" style="color: #008000;"></i>
+              <p class="navbar-brand bd-highlight fw-bold mt-5  me-5">Vacation Requests</p>
+          </div>
+         
+      
+<form  class="d-flex" >
+  <input  class="form-control mr-sm-2 my-4 me-5 ms-3 rounded-5" type="search" placeholder="Search" aria-label="Search">
+</form>
+      </div>
+<hr>
+    <div class="card-body">
+      <app-vacationrequestcard></app-vacationrequestcard>
+    </div>      
+  
+      <button type="button"  class="text-success bg-light border-0  fw-bold" routerLink="/vacationrequest1">
+    <span class="text-success">Viwe More</span>
+    <i class="fa-solid fa-angles-right" style="color: #008000;"></i>
+      </button>
+  
+  </div>

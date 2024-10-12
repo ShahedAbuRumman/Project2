@@ -1,0 +1,51 @@
+ <app-navbar></app-navbar>
+
+<div class="bg-light w-100 rounded-4 m-5">   
+  <div class="d-flex bd-highlight justify-content-between">
+    <div class="d-flex flex-row">
+      <i class="fa-solid fa-list-check p-2 w-25 h-25 ms-2" style="color: #008000;"></i>
+      <p class="navbar-brand bd-highlight fw-bold mt-5 me-5">Vacation Requests</p>
+    </div>
+
+    <form class="d-flex">
+      <input [(ngModel)]="searchText" name="search" class="form-control mr-sm-2 my-4 me-5 ms-3 rounded-5" type="search" placeholder="Search" aria-label="Search">
+    </form>
+  </div>
+  <hr>
+
+  <div class="d-flex flex-row" style="margin-bottom: -2rem;">
+    <div class="form-check" style="margin-left: 3rem;">
+      
+      <label class="form-check-label" for="selectAllCheckbox" style="color: gray;">
+        Select All
+      </label>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 2rem; height: 2rem; margin-left: 80rem;">
+      <path fill="#333333" d="M3.9 54.9C10.5 40.9 24.5 32 40 32h432c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9v127.1c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6v-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"/>
+    </svg>
+  </div>
+
+    <app-vacationrequestcard [searchText]="searchText" class="options_box"></app-vacationrequestcard>
+  </div>
+
+  <app-pager
+  [totalItems]="totalItems"  
+  [currentPage]="currentPage" 
+  (pageChange)="onPageChange($event)">
+</app-pager>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
